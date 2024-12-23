@@ -22,11 +22,11 @@ tailwind.config = {
         },
 
         colors: {
-            primary: '#ED1B24',
-            secondary: '#0E74BC',
+            primary: '#1B4AAA',
+            secondary: '#EFBA5D',
             white: '#FFF',
-            black: '#000',
-            'black-2': '#0F0F0F',
+            black: '#252B37',
+            black_2: '#000',
             neutral: {
                 900: "#111527",
                 800: "#1F2237",
@@ -48,6 +48,10 @@ tailwind.config = {
             red: {
                 1: "#FF575E",
             }
+        },
+        borderRadius: {
+            '2sm': '8px',
+            '4lg': '24px'
         }
     }
 }

@@ -2,11 +2,12 @@
 @import "ranger-select";
 
 :root {
-  --f-body: "Poppins";
+  --f-body: "Inter";
   --primary: #1B4AAA;
-  // --secondary: #0e74bc;
+  --secondary: #EFBA5D;
   --black: #252B37;
   --white: #FFF;
+  --gradient: linear-gradient(45deg, #E65451, #1E5DD6);
 }
 body {
   font-family: var(--f-body);
@@ -114,7 +115,7 @@ select {
   &-h3-5 {
     font-size: 36px;
     line-height: 122%;
-    font-weight: 600;
+    font-weight: 700;
     @media screen and (max-width: 1439px) {
       font-size: 32px;
     }
@@ -339,6 +340,12 @@ select {
       font-weight: 500;
     }
 
+    &-medium-1 {
+      @extend .text-body-sm;
+      font-weight: 500;
+      line-height: 142%
+    }
+
     &-regular {
       @extend .text-body-sm;
       font-weight: 400;
@@ -377,6 +384,10 @@ select {
   }
 }
 
+.container {
+  overflow: hidden;
+}
+
 .truncate {
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -393,4 +404,26 @@ select {
     @extend .truncate;
     -webkit-line-clamp: 4;
   }
+}
+.rounded-full {
+  border-radius: 50%;
+}
+select.input-filter {
+  display: flex;
+  align-items: flex-start;
+  appearance: none;
+  /* Remove default arrow */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("../image/icon/select-icon.png");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: 16px 16px;
+}
+.gradient {
+  background: var(--gradient, linear-gradient(#E65451 0%, #1E5DD6 100%));
+}
+.btn-hover:hover {
+  color: var(--white);
+  background: var(--gradient, linear-gradient(#E65451 0%, #1E5DD6 100%));
 }

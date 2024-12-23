@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,18 +19,236 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- fancy box -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css"
-    integrity="sha512-nNlU0WK2QfKsuEmdcTwkeh+lhGs6uyOxuUs+n+0oXSYDok5qy0EI0lt01ZynHq6+p/tbgpZ7P+yUb+r71wqdXg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+        integrity="sha512-nNlU0WK2QfKsuEmdcTwkeh+lhGs6uyOxuUs+n+0oXSYDok5qy0EI0lt01ZynHq6+p/tbgpZ7P+yUb+r71wqdXg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body>
-    <header>
 
+<body>
+    <style>
+        .language .active {
+            color: #1E1E1E;
+            background: #FFF;
+            border-radius: .375rem;
+        }
+
+        .swiper-button-prev:after,
+        .swiper-rtl .swiper-button-next:after {
+            content: '';
+        }
+
+        .swiper-button-next:after,
+        .swiper-rtl .swiper-button-prev:after {
+            content: '';
+        }
+
+        .shadow-filter {
+            border: 1px solid #D5D7DA;
+            box-shadow: 0px 1px 2px 0px rgba(10, 13, 18, 0.05);
+        }
+
+        .form-filter {
+            box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.16);
+        }
+
+        .navigation {
+            border-radius: 48px 48px 0px 0px;
+            box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.16);
+        }
+    </style>
+    <header>
+        <div class="header">
+            <!-- header pc -->
+            <div class="hidden lg:block fixed top-0 w-full h-[96px] z-[20] gradient">
+                <div class="wrap w-full h-full flex justify-center items-center">
+                    <figure class="w-[124px] mr-8">
+                        <img src="./assets/image/logo/logo_header.png" alt="">
+                    </figure>
+                    <nav class="mr-[142px]">
+                        <ul class="flex items-center gap-4">
+                            <li class="px-4 text-white text-body-md-uppercase text-body-md-bold">Về chúng tôi</li>
+                            <li class="px-4 text-white text-body-md-uppercase text-body-md-bold">Điểm đến & giá vé</li>
+                            <li class="px-4 text-white text-body-md-uppercase text-body-md-bold">Siêu phẩm độc đáo</li>
+                            <li class="px-4 text-white text-body-md-uppercase text-body-md-bold">Funny Kids chuyển động
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="flex gap-3">
+                        <div class="hotline border border-white rounded-2sm px-3 py-2 border-solid">
+                            <p class="text-white text-body-md-semibold">HOTLINE: <span class="text-secondary">1900 996
+                                    664</span>
+                        </div>
+                        <div class="search border border-white rounded-2sm px-2.5 py-2.5 border-solid">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                fill="none">
+                                <path
+                                    d="M17.5 17.5L13.875 13.875M15.8333 9.16667C15.8333 12.8486 12.8486 15.8333 9.16667 15.8333C5.48477 15.8333 2.5 12.8486 2.5 9.16667C2.5 5.48477 5.48477 2.5 9.16667 2.5C12.8486 2.5 15.8333 5.48477 15.8333 9.16667Z"
+                                    stroke="white" stroke-width="1.66667" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div class="language flex border border-white rounded-2sm border-solid"
+                            style="padding: 2px; gap: 2px;">
+                            <div class="child active p-1.5 text-white text-body-md-regular text-white">
+                                VN
+                            </div>
+                            <div class="child p-1.5 text-white text-body-md-regular text-white">
+                                EN
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- header-mobile -->
+            <div class="block lg:hidden fixed top-0 w-[100vw] bg-white z-[20]">
+
+            </div>
+        </div>
     </header>
     <main>
+        <section class="relative">
+            <div class="mt-[96px] max-h-[640px] h-[640px]" id="home-swiper" class="swiper swiper-homepage">
+                <div class="swiper-wrapper h-full">
+                    <!-- Slides -->
+                    <div class="swiper-slide h-full">
+                        <div class="gallery-item h-full">
+                            <figure class="h-full">
+                                <img src="./assets/image/banner/banner1.png" class="" alt="">
+                            </figure>
+                        </div>
+                    </div>
+                    <!-- Slides -->
+                    <div class="swiper-slide h-full">
+                        <div class="gallery-item h-full">
+                            <figure class="h-full">
+                                <img src="./assets/image/banner/banner2.png" class="" alt="">
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-next bg-white rounded-full right-8 w-[44px] h-[44px] hover:bg-[#dbdbdb]">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M9 18L15 12L9 6" stroke="#6941C6" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </span>
+                </div>
+                <div class="swiper-button-prev bg-white rounded-full left-8 w-[44px] h-[44px] hover:bg-[#dbdbdb]">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M15 18L9 12L15 6" stroke="#6941C6" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </span>
+                </div>
+            </div>
+            <form
+                class="form-filter w-fit z-[15] absolute bottom-[-16px] px-8 py-6 bg-white flex gap-4 rounded-4lg left-0 right-0 mx-auto">
+                <label class="flex flex-col gap-1.5">
+                    <p class="text-black text-body-sm-medium-1">Trung tâm</p>
+                    <select
+                        class="input-filter w-[432px] text-[#717680] text-body-md-regular py-[10px] pl-[14px] pr-[48px] rounded-2sm shadow-filter">
+                        <option value="">Funny Kids Vincom Long Biên</option>
+                    </select>
+                </label>
+                <label class="flex flex-col gap-1.5">
+                    <p class="text-black text-body-sm-medium-1">Loại vé</p>
+                    <select
+                        class="input-filter w-[320px] text-[#717680] text-body-md-regular py-[10px] pl-[14px] pr-[48px] rounded-2sm shadow-filter">
+                        <option value="">Vé ngày thường</option>
+                    </select>
+                </label>
+                <label class="flex flex-col gap-1.5">
+                    <p class="text-black text-body-sm-medium-1">Số trẻ em</p>
+                    <div class="counter flex items-center justify-center w-[160px] py-3 px-6 rounded-2sm shadow-filter">
+                        <button class="decrement btn-minus">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none">
+                                <path d="M5 12H19" stroke="#101828" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                        <input class="text-[#717680] text-body-md-regular w-[88px] text-center" value="1">
+                        <button class="increment btn-plus">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none">
+                                <path d="M12 5V19M5 12H19" stroke="#101828" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+                </label>
+                <label class="flex flex-col gap-1.5">
+                    <p class="text-black text-body-sm-medium-1">Số người lớn</p>
+                    <div class="counter flex items-center justify-center w-[160px] py-3 px-6 rounded-2sm shadow-filter">
+                        <button class="decrement btn-minus">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none">
+                                <path d="M5 12H19" stroke="#101828" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                        <input class="text-[#717680] text-body-md-regular w-[88px] text-center" value="1">
+                        <button class="increment btn-plus">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none">
+                                <path d="M12 5V19M5 12H19" stroke="#101828" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+                </label>
+                <label class="flex">
+                    <p></p>
+                    <button
+                        class="gradient text-white text-body-md-semibold py-3 px-[20px] rounded-2sm w-[200px] self-end">ĐẶT
+                        VÉ</button>
+                </label>
 
+            </form>
+        </section>
+        <section class="mt-[-50px] mb-[500px]">
+            <div class="cover z-[10] relative">
+                <div class="h-[160px] navigation" style="background: url('./assets/image/homepage/navigation.png');">
+                </div>
+            </div>
+            <div class="relative">
+                <video class="w-full" autoplay muted loop src="./assets/image/homepage/kid-video.mp4"></video>
+                <div class="content flex flex-col w-[460px] h-fit absolute my-auto top-0 bottom-0 right-[10%]">
+                    <h2 class="text-white text-heading-h3-5 mb-[16px]">Nơi để quý ba mẹ gửi gắm yêu thương một cách trọn vẹn.</h2>
+                    <span class="text-white text-body-lg-medium mb-[24px]">Funny Kids được ra đời từ một ước mơ đem lại cho các bạn nhỏ
+                        những nụ cười và một tuổi thơ tuyệt vời nhất. Với gần 40 trung tâm vui chơi giải trí chất lượng
+                        cao toàn quốc, mỗi trung tâm mang một màu sắc độc đáo, riêng biệt.</span>
+                    <a href="#" class="w-fit text-white text-body-lg-semibold px-[28px] py-[16px] border border-white rounded-2sm border-solid btn-hover">VỀ CHÚNG TÔI</a>
+                </div>
+            </div>
+        </section>
+        <section>
+            
+        </section>
     </main>
     <footer>
 
     </footer>
+    <script defer>
+        const swiper = new Swiper('#home-swiper', {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            loop: true,
+            autoplay: true,
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            // And if we need scrollbar
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+        });
+    </script>
 </body>
+
 </html>
